@@ -6,11 +6,11 @@ import time
 workbook = load_workbook("hello_world.xlsx")  # opens up the excel file you are using
 # it must be a file that is in the same folder as the script
 sheet = workbook.active
-reddit = praw.Reddit(client_id='*',
-                     client_secret='*',  # logs in your reddit account
-                     user_agent='*',
-                     username='*',   # give me your reddit account, and I can make this work for your reddit account
-                     password='*')
+reddit = praw.Reddit(client_id='MGSGhbDCXWHAmA',
+                     client_secret='u3JgbIqbY7kpsGCCaqerYaopm8iicA', 
+                     user_agent='bot',
+                     username='takingitdaybyday77',   
+                     password='MitiKape42$')
 n = 1
 usernames = []
 while True:
