@@ -1,4 +1,5 @@
 import praw
+import openpyxl
 from openpyxl import load_workbook
 import random
 import time
@@ -31,8 +32,10 @@ def message():
 
     for i in range(len(usernames)):
         w = random.randint(1, (len(text) - 1))
-        reddit.redditor(usernames[q]).message(title, text[w])  # messages all the people from the excel file
-
+        try:
+            reddit.redditor(usernames[q]).message(title, text[w])  # messages all the people from the excel file
+        except:
+            continue
         if usernames[q] in usedusernames:  # means they can't be messaged twice
             continue
         print(f'you just messaged u/{usernames[q]}')  # notifies you if a message has been sent
